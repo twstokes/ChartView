@@ -22,4 +22,16 @@ extension Color {
         }
         self.init(red: Double(red) / 255, green: Double(green) / 255, blue: Double(blue) / 255)
     }
+
+    #if os(macOS)
+    static let label = Color(NSColor.labelColor)
+    #else
+    static let label = Color(UIColor.label)
+    #endif
+
+    #if os(macOS)
+    static let secondary = Color(NSColor.secondaryLabelColor)
+    #else
+    static let secondary = Color(UIColor.secondary)
+    #endif
 }
