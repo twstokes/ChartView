@@ -32,6 +32,6 @@ extension Color {
     #if os(macOS)
     static let secondary = Color(NSColor.secondaryLabelColor)
     #else
-    static let secondary = Color(UIColor.secondary)
+    static let secondary = Color(UIColor.secondaryLabel)
     #endif
 }
